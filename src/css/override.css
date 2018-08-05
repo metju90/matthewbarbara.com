@@ -73,3 +73,16 @@ img {
      }
 
 }
+.greybg {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 999999;
+}
+@media all and (display-mode: standalone) {
+    .navbar-default {
+        background-color: #000;
+    }
+  }
