@@ -1,0 +1,75 @@
+#interests li {
+    margin: 20px 0;
+}
+#portfolio {
+    background: #fff;
+}
+#portfolio ul {
+    padding: 0;
+}
+
+#portfolio p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+.contact {
+    font-size: 16px;
+    margin: 10px 0;
+    color:#fff;    
+}
+#contact h2 {
+    color:#fff;        
+}
+#contact hr, #contact a {
+    color:#fff;        
+}
+#contact ul, #portfolio ul {
+    font-size: 20px;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 20px;
+    max-width: 280px;
+    margin: auto;
+}
+#contact li, #portfolio li {
+    margin: 5px 0;
+}
+.contact .fa {
+    font-size: 23px;
+    margin-right: 10px;
+}
+#contact {
+    background: #2196F3;
+}
+h3 {
+    text-align: center;
+}
+.parent {
+    font-size: 0;
+    background: #fff;
+}
+.parent section {
+   width: 50%;
+   display: inline-block;
+   font-size: 2rem;
+   height: 100%;
+   
+}
+
+.blueBackground {
+    background: #2196F3
+}
+img {
+    width: 240px;
+}
+
+@media only screen and (max-width: 768px) {
+    .parent section {
+        width: 100%;
+        display: block;
+        font-size: 2rem;
+        height: 100%;
+        
+     }
+
+}
