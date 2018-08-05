@@ -5,7 +5,9 @@
   "dependencies": {
     "animated-scroll-to": "^1.2.2",
     "react": "^16.4.2",
+    "react-detect-offline": "^2.1.2",
     "react-dom": "^16.4.2",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {

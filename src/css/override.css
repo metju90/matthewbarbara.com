@@ -1,3 +1,6 @@
+a:hover {
+    cursor: pointer;
+}
 #interests li {
     margin: 20px 0;
 }
@@ -73,13 +76,17 @@ img {
      }
 
 }
-.greybg {
-    display: none;
+#greybg {
     position: fixed;
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,0.4);
     z-index: 999999;
+    color: white;
+    text-align: center;
+    padding-top: 84px;
+    font-size: 16px;
+    font-weight: bold;
 }
 @media all and (display-mode: standalone) {
     .navbar-default {

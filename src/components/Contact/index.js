@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome'
 
 export default () => {
     return (
@@ -10,37 +11,37 @@ export default () => {
                         <ul>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-envelope" /> barbaramatthew90 at gmail dot com
+                                    <FontAwesome name="envelope" /> barbaramatthew90 at gmail dot com
                     </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-skype" /> metju90
+                                    <FontAwesome name="skype" /> metju90
                     </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-fw fa-linkedin" /><a href="https://www.linkedin.com/in/matthew-barbara-66a78064/">Linkedin</a>
+                                    <FontAwesome name="linkedin" /><a href="https://www.linkedin.com/in/matthew-barbara-66a78064/">Linkedin</a>
                                 </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-fw fa-stack-overflow" /><a href="https://stackoverflow.com/users/3861691/matthew-barbara">Stackoverflow</a>
+                                    <FontAwesome name="stack-overflow" /><a href="https://stackoverflow.com/users/3861691/matthew-barbara">Stackoverflow</a>
                                 </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-fw fa-twitter" /><a href="https://twitter.com/Metju90">Twitter</a>
+                                    <FontAwesome name="twitter" /><a href="https://twitter.com/Metju90">Twitter</a>
                                 </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-fw fa-phone" /> +41 79636645 (Swiss)
+                                    <FontAwesome name="phone" /> +41 79636645 (Swiss)
                     </div>
                             </li>
                             <li>
                                 <div className="contact">
-                                    <i className="fa fa-fw fa-phone" /> +356 79938689 (Malta)
+                                    <FontAwesome name="phone" /> +356 79938689 (Malta)
                     </div>
                             </li>
                         </ul>

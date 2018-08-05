@@ -3,7 +3,6 @@ import React from 'react';
 export default () => {
     return (
         <section className="tout" id="portfolio">
-          <div className>
             <div className="col-lg-12 text-center">
               <h2>Portfolio</h2>
               <hr />
@@ -19,7 +18,6 @@ export default () => {
               </ul>
               <p>* Due to non-disclosure agreements I am limited to what I can list in my portfolio.</p>
             </div>
-          </div>
         </section>
       );
 }
