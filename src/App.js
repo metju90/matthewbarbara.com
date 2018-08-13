@@ -13,6 +13,7 @@ import Highlights  from './components/Highlights';
 import Portfolio  from './components/Portfolio';
 import Contact  from './components/Contact';
 import ScrollToTop  from './components/ScrollToTop';
+
 class App extends Component {
 
 /* <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
