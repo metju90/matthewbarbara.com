@@ -1,30 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import fetch_about from '../../actions';
+class About extends Component  {
 
-export default () => {
-    return (
-        
+    componentDidMount() {
+      this.props.fetch_about();
+    }
+
+    render() {
+      const { title, content} = this.props;
+      const contentList = content.split('\n')
+      console.log('the props areee', contentList);
+      return (
       <section id="about">
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2>About Me</h2>
+            <h2>{title}</h2>
             <hr />
           </div>
         </div>
         <div className="row">
           <div className="col-sm-10 col-sm-offset-1">
-            <p>
-              I have 4 years of experience as a software engineer, and have worked
-              at both small startups and large organizations. While I'm a proficient full-stack
-              developer, my expertise is in building scalable front-end applications using React and Redux for state management
-            </p>
-            <p>
-              I get fascinated when I learn the theory of how the software work. Knowing why it works it's more
-              satisfying than just getting it to work.
-            </p>
+          {contentList.map(c => <p>{c}</p>)}
           </div>
         </div>
       </div>
     </section>
-    )
+      )
+    }
 };
+
+const mapStateToProps = state => {
+  return {
+    ...state.about
+  }
+}
+
+const mapDispatchToProps = {
+  fetch_about
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);
