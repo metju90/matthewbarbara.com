@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import fetch_about from '../../actions';
 import FontAwesome from 'react-fontawesome'
 
 export default () => {

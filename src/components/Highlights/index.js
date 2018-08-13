@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetch_highlights } from '../../actions';
 
-export default () => {
+class Highlights extends Component {
+
+  componentDidMount() {
+    this.props.fetch_highlights();
+  }
+
+  render() {
+    const { title, projects, achievements} = this.props
     return (
         <section className="tout" id="interests">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h2>Highlights</h2>
+                <h2>{title}</h2>
                 <hr />
               </div>
             </div>
@@ -57,5 +66,18 @@ export default () => {
             </div>
           </div>
         </section>
-      );
+      )
+    }
 }
+
+const mapStateToProps = state => {
+  return {
+    ...state.highlights
+  }
+}
+
+const mapDispatchToProps = {
+  fetch_highlights
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Highlights);

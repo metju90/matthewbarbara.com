@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetch_about from '../../actions';
+import { fetch_about } from '../../actions';
+
 class About extends Component  {
 
     componentDidMount() {
@@ -9,7 +10,7 @@ class About extends Component  {
 
     render() {
       const { title, content} = this.props;
-      const contentList = content.split('\n')
+      const contentList = content.split('\n');
       console.log('the props areee', contentList);
       return (
       <section id="about">
