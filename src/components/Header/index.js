@@ -34,9 +34,6 @@ export default () => {
                 <a onClick={() => scrollToElemt('#interests')}>Highlights</a>
               </li>
               <li>
-                <a onClick={() => scrollToElemt('#portfolio')}>Portfolio</a>
-              </li>
-              <li>
                 <a onClick={() => scrollToElemt('#contact')}>Contact</a>
               </li>
             </ul>

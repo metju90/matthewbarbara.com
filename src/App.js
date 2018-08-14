@@ -29,10 +29,7 @@ class App extends Component {
         <Me />
         <About />
         <Highlights />
-        <div className="parent">
-          <Portfolio />
-          <Contact />
-        </div>
+        <Contact />
         <ScrollToTop />
       </div>
     );

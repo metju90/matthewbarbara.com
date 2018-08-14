@@ -23,7 +23,7 @@ class Portfolio extends Component {
               <ul>
                 {websites.map(web => {
                   return (
-                    <li key={shortHash(web.title)}>
+                    <li key={shortHash(Math.random()*1)}>
                       <div>
                         <a  rel="noopener noreferrer" target="_blank" href={web.url}>{web.title}</a>
                         </div>

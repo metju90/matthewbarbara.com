@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PacmanLoader from 'react-spinners/PacmanLoader';
+import shortHash from 'short-hash';
 import { fetch_about } from '../../actions';
 
 class About extends Component  {
@@ -9,25 +11,33 @@ class About extends Component  {
     }
 
     render() {
-      const { title, content} = this.props;
+      const { title, content, isLoading} = this.props;
       const contentList = content.split('\n');
       console.log('the props areee', contentList);
+      if (isLoading) {
+        return  (
+        <section id="about">
+            <div className="container">
+                <PacmanLoader size="25" color="#2196F3" />
+            </div>
+        </section>)
+      }
       return (
-      <section id="about">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <h2>{title}</h2>
-            <hr />
+        <section id="about">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2>{title}</h2>
+              <hr />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-10 col-sm-offset-1">
+            {contentList.map(c => <p key={shortHash(Math.random()*1)}>{c}</p>)}
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-10 col-sm-offset-1">
-          {contentList.map(c => <p>{c}</p>)}
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
       )
     }
 };

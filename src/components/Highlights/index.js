@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PacmanLoader from 'react-spinners/PacmanLoader';
 import { fetch_highlights } from '../../actions';
 
 class Highlights extends Component {
@@ -9,7 +10,13 @@ class Highlights extends Component {
   }
 
   render() {
-    const { title, projects, achievements} = this.props
+    const { title, projects, achievements, isLoading} = this.props
+    if (isLoading) {
+      return  (
+      <section className="tout" id="interests">
+          <PacmanLoader size="25" color="#2196F3" />
+      </section>)
+    }
     return (
         <section className="tout" id="interests">
           <div className="container">

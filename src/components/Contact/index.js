@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import shortHash from 'short-hash';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome'
+import PacmanLoader from 'react-spinners/PacmanLoader';
 import { fetch_contact } from '../../actions';
 
 class Contact extends Component {
@@ -11,17 +12,23 @@ class Contact extends Component {
     }
   
     render() {
-    const { title, content } = this.props;
+    const { title, content, isLoading } = this.props;
+    if (isLoading) {
+        return  (
+        <section id="contact">
+            <PacmanLoader size="25" color="#fff" />
+        </section>)
+      }
     return (
             <section id="contact">
-                <div className>
-                    <div className="col-lg-12 text-center">
+                <div className="container">
+                    <div className="col-lg-4 col-lg-offset-4 text-center">
                         <h2>{title}</h2>
                         <hr />
                         <ul>
                             {content.map(c => {
                                 return (
-                                    <li key={shortHash(c.title)}>
+                                    <li key={shortHash(Math.random()*1)}>
                                         <div className="contact">
                                             <FontAwesome name={c.icon} />
                                              {c.url ? <a target="_blank" href={c.url}> {c.title} </a> : c.title}
