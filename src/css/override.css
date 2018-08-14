@@ -61,6 +61,10 @@ h3 {
    
 }
 
+section {
+    min-height: 400px;
+}
+
 .blueBackground {
     background: #2196F3
 }

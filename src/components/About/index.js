@@ -1,55 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import Loadable from 'react-loadable';
 import PacmanLoader from 'react-spinners/PacmanLoader';
-import shortHash from 'short-hash';
-import { fetch_about } from '../../actions';
+import Waypoint from 'react-waypoint';
 
-class About extends Component  {
+const LoadableComponent = Loadable({
+  loader: () => import('./source'),
+  loading: PacmanLoader,
+});
 
-    componentDidMount() {
-      this.props.fetch_about();
+export default class App extends Component {
+    state = {
+        visible: false
     }
-
-    render() {
-      const { title, content, isLoading} = this.props;
-      const contentList = content.split('\n');
-      console.log('the props areee', contentList);
-      if (isLoading) {
-        return  (
+  render() {
+    return   (
         <section id="about">
             <div className="container">
-                <PacmanLoader size="25" color="#2196F3" />
+                <Waypoint onEnter={()=> this.setState({visible:true})}>
+                    {this.state.visible && <LoadableComponent/>}
+                </Waypoint>
             </div>
-        </section>)
-      }
-      return (
-        <section id="about">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2>{title}</h2>
-              <hr />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-10 col-sm-offset-1">
-            {contentList.map(c => <p key={shortHash(Math.random()*1)}>{c}</p>)}
-            </div>
-          </div>
-        </div>
-      </section>
-      )
-    }
-};
-
-const mapStateToProps = state => {
-  return {
-    ...state.about
+        </section>
+    )
   }
 }
-
-const mapDispatchToProps = {
-  fetch_about
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(About);
