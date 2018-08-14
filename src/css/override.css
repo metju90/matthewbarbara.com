@@ -50,6 +50,8 @@ h3 {
 .parent {
     font-size: 0;
     background: #fff;
+    position: relative;
+    min-height: 300px;
 }
 .parent section {
    width: 50%;
@@ -75,6 +77,17 @@ img {
         
      }
 
+}
+/* Pacman spinner */
+.css-ph4qhg {
+    position: absolute;
+    font-size: 0;
+    height: 25px;
+    width: 25px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto;
 }
 #greybg {
     position: fixed;

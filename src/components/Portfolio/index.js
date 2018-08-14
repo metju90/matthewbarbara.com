@@ -1,23 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
+import shortHash from 'short-hash';
+import { connect } from 'react-redux';
+import PacmanLoader from 'react-spinners/PacmanLoader';
 
-export default () => {
+import { fetch_portfolio } from '../../actions';
+class Portfolio extends Component {
+
+  componentDidMount() {
+    this.props.fetch_portfolio();
+  }
+
+  render() {
+    const {title, websites, isLoading} = this.props;
+    if (isLoading) {
+      return <PacmanLoader size="25" color="#285172" />
+    }
     return (
         <section className="tout" id="portfolio">
             <div className="col-lg-12 text-center">
-              <h2>Portfolio</h2>
+              <h2>{title}</h2>
               <hr />
               <ul>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="www.caferougemalta.com">Cafe rouge</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://predictor.gg">Predictor GG</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.cnccosmetics.com/">CNC Cosmetics</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.eatmeimfamous.com/">Eat me i'm Famous</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.eversio.org/">Project EVERSIO</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.thecompasslounge.com/">The Compass lounge</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.thepavilion.com.mt/">The Pavilion Gastro Pub</a></div></li>
-                <li><div><a  rel="noopener noreferrer" target="_blank" href="https://www.lukestakeaway.com/">Luke's Take Away</a></div></li>
+                {websites.map(web => {
+                  return (
+                    <li key={shortHash(web.title)}>
+                      <div>
+                        <a  rel="noopener noreferrer" target="_blank" href={web.url}>{web.title}</a>
+                        </div>
+                    </li>
+
+                  )
+                })}
               </ul>
               <p>* Due to non-disclosure agreements I am limited to what I can list in my portfolio.</p>
             </div>
         </section>
       );
+    }
 }
+
+const mapStateToProps = state => {
+  return {
+    ...state.portfolio
+  }
+}
+
+const mapDispatchToProps = {
+  fetch_portfolio
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
