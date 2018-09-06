@@ -28,13 +28,13 @@ export default () => {
                 <a onClick={() => scrollToElemt('header')} />
               </li>
               <li>
-                <a onClick={() => scrollToElemt('#about')}>About Me</a>
+                <a className="menu-item" onClick={() => scrollToElemt('#about')}>About Me</a>
               </li>
               <li>
-                <a onClick={() => scrollToElemt('#interests')}>Highlights</a>
+                <a className="menu-item" onClick={() => scrollToElemt('#interests')}>Highlights</a>
               </li>
               <li>
-                <a onClick={() => scrollToElemt('#contact')}>Contact</a>
+                <a className="menu-item" onClick={() => scrollToElemt('#contact')}>Contact</a>
               </li>
             </ul>
           </div>

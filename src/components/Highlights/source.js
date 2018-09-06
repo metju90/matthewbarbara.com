@@ -30,7 +30,7 @@ class Highlights extends Component {
                     <b>Single Page Application</b>. I contributed significantly to create an online casino interface based on a SPA which can easily be cloned and branded differently. Today the SPA built is being served to millions of users across the globe.
                   </li>
                   <li>
-                    <b>Reusability</b> I formed part of a team which worked on a solution to overcome code reusability issues by extracting a large codebase into separate and independent versioned packages using JS managing project tool Lerna. This 
+                    <b>Reusability</b> I formed part of a team which worked on a solution to overcome code reusability issues by extracting a large codebase into separate and independent versioned packages using JS managing project tool Lerna.
                   </li>
                   <li>
                     <b>Server Side Render</b>. Having previous experience with React as a SPA, with a great effort I quickly adapted to a platform running SSR in React. I played a key role in developing a portal which has no less than 80k visitors per hour.
@@ -53,7 +53,7 @@ class Highlights extends Component {
                     <b>Site Performance</b>. I am keen on website's loading time. I audit most of the sites I work on and recommend changes to optimize the performance. This usually results in quicker  browser first paint and user interactvity.
                   </li>
                   <li>
-                    <b>Getting the job done</b>. I was assigned to a task which required advanced Microsoft Excel formulas to be converted into a web application for Swissquote bank. Despite my lack of knowledge in finance at that time, with extraordinary effort and patience I succeeded and delivered before due time. 
+                    <b>Getting the job done</b>. I was assigned to a task which required advanced Microsoft Excel formulas to be converted into a web application for a bank based in Switzerland. Despite my lack of knowledge in finance at that time, with extraordinary effort and patience I succeeded and delivered before due time. 
                   </li>
                   <li>
                     <b>Improvements</b>.  I was hired to work as a full-stack developer on a legacy system. After analyzing the system, I proposed, developed and deployed several key features which affected both the performance and user experience. To name a few – added content lazy-loading and replaced enormous amount of API calls with a websocket connection between the client and the server.

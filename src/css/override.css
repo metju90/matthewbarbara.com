@@ -105,6 +105,11 @@ img {
     font-size: 16px;
     font-weight: bold;
 }
+.menu-item {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
 @media all and (display-mode: standalone) {
     .navbar-default {
         background-color: #000;
